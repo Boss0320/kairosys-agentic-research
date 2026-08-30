@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="folio-header">
+        <p class="folio-mark" id="folio-mark"></p>
+        <div class="language-controls" id="language-controls">
+          <button type="button" class="language-button is-current" data-locale="en" aria-pressed="true"></button>
+          <button type="button" class="language-button" data-locale="zh-TW" aria-pressed="false"></button>
+        </div>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow" id="hero-descriptor"></p>
+        <h1 id="hero-title"></h1>
+        <p class="hero-thesis" id="hero-thesis"></p>
+        <p class="hero-ownership" id="hero-ownership"></p>
+      </section>
+
+      <section class="system-overview" id="system-overview" aria-labelledby="system-overview-title">
+        <div class="section-label-row">
+          <h2 id="system-overview-title"></h2>
+          <p id="system-overview-note"></p>
+        </div>
+        <ol class="capability-flow" id="capability-flow"></ol>
+      </section>
+
+      <section class="case-selector" aria-labelledby="case-selector-title">
+        <div class="section-label-row">
+          <h2 id="case-selector-title"></h2>
+          <p id="case-selector-note"></p>
+        </div>
+        <div class="scenario-tabs" id="scenario-tabs" role="tablist"></div>
+      </section>
+
+      <section class="evidence-section" aria-labelledby="evidence-title">
+        <div class="section-label-row">
+          <h2 id="evidence-title"></h2>
+          <p id="evidence-note"></p>
+        </div>
+        <div class="evidence-rail" id="evidence-rail" aria-live="polite"></div>
+      </section>
+
+      <section class="quality-section" aria-labelledby="quality-title">
+        <div class="section-label-row">
+          <h2 id="quality-title"></h2>
+          <p id="quality-note"></p>
+        </div>
+        <div class="quality-governance" id="quality-governance" aria-live="polite">
+          <article class="quality-stage integrity-stage">
+            <p class="quality-label" id="quality-integrity-label"></p>
+            <strong class="quality-state" id="quality-integrity-state"></strong>
+            <p class="quality-detail" id="quality-integrity-reasons"></p>
+          </article>
+          <article class="quality-stage utility-stage">
+            <p class="quality-label" id="quality-utility-label"></p>
+            <dl class="score-pair">
+              <div>
+                <dt id="quality-raw-label"></dt>
+                <dd id="quality-utility-score"></dd>
+              </div>
+              <div>
+                <dt id="quality-effective-label"></dt>
+                <dd id="quality-effective-score"></dd>
+              </div>
+            </dl>
+            <p class="quality-detail" id="quality-completion"></p>
+          </article>
+          <article class="quality-stage delivery-stage">
+            <p class="quality-label" id="quality-delivery-label"></p>
+            <strong class="quality-delivery" id="quality-delivery"></strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="report-section" aria-labelledby="report-title">
+        <div class="report-heading">
+          <p class="eyebrow" id="report-kicker"></p>
+          <h2 id="report-title"></h2>
+        </div>
+        <div class="report-layout">
+          <article class="report-sheet" id="report-sheet" aria-live="polite"></article>
+          <aside class="finding-ledger" aria-labelledby="finding-title">
+            <h3 id="finding-title"></h3>
+            <dl id="finding-list"></dl>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="case-footer">
+        <div>
+          <p class="footer-label" id="technical-label"></p>
+          <p id="technical-copy"></p>
+        </div>
+        <div>
+          <p class="footer-label" id="boundary-label"></p>
+          <p id="boundary-copy"></p>
+        </div>
+      </footer>
+    </main>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
